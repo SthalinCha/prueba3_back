@@ -5,7 +5,7 @@ import { Cliente } from "./models/cliente.js";
 import connectDB from "./models/db.js";
 
 const app = express();
-const PORT = 3030;
+const PORT = 4000;
 
 // Conexión a la base de datos
 connectDB();
