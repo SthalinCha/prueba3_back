@@ -14,8 +14,12 @@ connectDB();
 app.use(cors()); // Habilita CORS para todas las rutas
 app.use(express.json()); // Parseo de JSON en el body de las solicitudes
 
-// Rutas
+// Ruta raíz para verificar el estado del servidor
+app.get('/', (req, res) => {
+  res.json({ message: 'Servidor en funcionamiento' });
+});
 
+// Rutas
 app.use("/api/clientes", EnrutadorCliente(Cliente));
 
 // Iniciar servidor
